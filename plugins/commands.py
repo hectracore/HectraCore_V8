@@ -424,12 +424,14 @@ async def start(client, message):
             file = getattr(msg, filetype.value)
             title = clean_filename(file.file_name)
             size=get_size(file.file_size)
+            duration = getattr(files, 'duration','Unknown')
+            language = getattr(files, 'language','Unknown')
             f_caption = f"<code>{title}</code>"
             settings = await get_settings(int(grp_id))
             TGE_CAPTION = settings.get('caption', CUSTOM_FILE_CAPTION)
             if TGE_CAPTION:
                 try:
-                    f_caption=TGE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
+                    f_caption=TGE_CAPTION.format(file_name= '' if title is None else title, file_duration= '' if title is None else duration, file_language= '' if title is None else language, file_size='' if size is None else size, file_caption='')
                 except:
                     return
             await msg.edit_caption(
