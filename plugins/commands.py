@@ -431,7 +431,7 @@ async def start(client, message):
             TGE_CAPTION = settings.get('caption', CUSTOM_FILE_CAPTION)
             if TGE_CAPTION:
                 try:
-                    f_caption=TGE_CAPTION.format(file_name= '' if title is None else title, file_duration= '' if title is None else duration, file_language= '' if title is None else language, file_size='' if size is None else size, file_caption='')
+                    f_caption=TGE_CAPTION.format(file_name= '' if title is None else title, file_duration = getattr(files, 'duration', 'Unknown'), file_size='' if size is None else size, file_caption='')
                 except:
                     return
             await msg.edit_caption(
