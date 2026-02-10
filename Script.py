@@ -228,7 +228,7 @@ Name : {}
 
 Message : <code>{}</code>"""
     
-    CAPTION = """`📂 {file_name}</a> `\n\n` 💾 Size:{file_size} ` \n\n ` 🔗 Download and enjoy! 🎀` \n <a href="https://t.me/srsuggestionsmc">[𝗛𝗲𝗰𝘁𝗿𝗮𝗖𝗼𝗿𝗲]</a>"""
+    CAPTION = """`📂 {file_name}</a> `\n\n` 💾 Size:{file_size} ` \n\n ⏳ {duration} \n\n ` 🔗 Download and enjoy! 🎀` \n <a href="https://t.me/srsuggestionsmc">[𝗛𝗲𝗰𝘁𝗿𝗮𝗖𝗼𝗿𝗲]</a>"""
 
     
     MOVIE_UPDATE_NOTIFY_TXT = """
